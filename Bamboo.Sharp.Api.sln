@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bamboo.Sharp.Api", "Bamboo.Sharp.Api\Bamboo.Sharp.Api.csproj", "{09B2E97B-6103-4693-9EBB-0450DF36465B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bamboo.Sharp.Api.Specs", "Bamboo.Sharp.Api.Specs\Bamboo.Sharp.Api.Specs.csproj", "{BD0660FF-0F02-4641-8B9A-7D96CFCDE909}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09B2E97B-6103-4693-9EBB-0450DF36465B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B2E97B-6103-4693-9EBB-0450DF36465B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B2E97B-6103-4693-9EBB-0450DF36465B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B2E97B-6103-4693-9EBB-0450DF36465B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD0660FF-0F02-4641-8B9A-7D96CFCDE909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD0660FF-0F02-4641-8B9A-7D96CFCDE909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD0660FF-0F02-4641-8B9A-7D96CFCDE909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD0660FF-0F02-4641-8B9A-7D96CFCDE909}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
