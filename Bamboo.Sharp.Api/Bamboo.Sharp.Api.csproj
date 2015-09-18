@@ -55,6 +55,8 @@
     <Compile Include="Deserializers\ProjectsDeserializer.cs" />
     <Compile Include="Exceptions\InternalServerError.cs" />
     <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\Results.cs" />
     <Compile Include="Model\WebException.cs" />
     <Compile Include="Model\Action.cs" />
     <Compile Include="Model\Actions.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Model\Stages.cs" />
     <Compile Include="Model\Type.cs" />
     <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\BuildService.cs" />
     <Compile Include="Services\CurrentUserService.cs" />
     <Compile Include="Services\IService.cs" />
     <Compile Include="Services\ProjectService.cs" />

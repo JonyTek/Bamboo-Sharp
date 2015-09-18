@@ -1,7 +1,6 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using Bamboo.Sharp.Api.Model;
+﻿using Bamboo.Sharp.Api.Model;
 using RestSharp;
+using System.Threading.Tasks;
 
 namespace Bamboo.Sharp.Api.Services
 {
@@ -32,26 +31,26 @@ namespace Bamboo.Sharp.Api.Services
 
         public Results GetBuildsByPlanKey(string planKey)
         {
-            IRestRequest GetBuildsRequest = new RestRequest
+            IRestRequest getBuildsRequest = new RestRequest
             {
                 Resource = string.Format(GetBuildsResource, planKey),
                 RootElement = "results",
                 Method = Method.GET
             };
 
-            return Client.Execute<Results>(GetBuildsRequest);
+            return Client.Execute<Results>(getBuildsRequest);
         }
 
         public async Task<Results> GetBuildsByPlanKeyAsync(string planKey)
         {
-            IRestRequest GetBuildsRequest = new RestRequest
+            IRestRequest getBuildsRequest = new RestRequest
             {
                 Resource = string.Format(GetBuildsResource, planKey),
                 RootElement = "results",
                 Method = Method.GET
             };
 
-            return await Client.ExecuteAsync<Results>(GetBuildsRequest);;
+            return await Client.ExecuteAsync<Results>(getBuildsRequest);;
         }
     }
 }
