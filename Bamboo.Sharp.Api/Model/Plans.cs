@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
-using RestSharp.Deserializers;
+﻿using RestSharp.Deserializers;
+using System.Collections.Generic;
 
 namespace Bamboo.Sharp.Api.Model
 {

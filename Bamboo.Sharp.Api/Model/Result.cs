@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bamboo.Sharp.Api.Model
+﻿namespace Bamboo.Sharp.Api.Model
 {
     public class Result : BaseNode
     {
