@@ -23,6 +23,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/project/{id} ",
                 Method = Method.POST
             };
+
             request.AddParameter("id", id, ParameterType.UrlSegment);
 
             return Client.Execute<object>(request);
@@ -35,6 +36,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/version/{id}/status/{state} ",
                 Method = Method.POST
             };
+
             request.AddParameter("id", id, ParameterType.UrlSegment);
             request.AddParameter("state", state, ParameterType.UrlSegment);
 
@@ -60,6 +62,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/project/{id} ",
                 Method = Method.GET
             };
+
             request.AddParameter("id", id, ParameterType.UrlSegment);
 
             return Client.Execute<DeployProject>(request);
@@ -73,7 +76,9 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/projectVersioning/{id}/nextVersion ",
                 Method = Method.GET
             };
+
             request.AddParameter("id", id, ParameterType.UrlSegment);
+
             return Client.Execute<object>(request);
         }
 
@@ -84,6 +89,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/projectVersioning/{id}/namingPreview ",
                 Method = Method.GET
             };
+
             request.AddParameter("id", id, ParameterType.UrlSegment);
 
             return Client.Execute<object>(request);
@@ -107,6 +113,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/project/{projectId}/versions ",
                 Method = Method.GET
             };
+
             request.AddParameter("projectId", projectId, ParameterType.UrlSegment);
 
             return Client.Execute<object>(request);
@@ -141,7 +148,9 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/projectVersioning/{id}/variables ",
                 Method = Method.GET
             };
+
             request.AddParameter("id", id, ParameterType.UrlSegment);
+
             return Client.Execute<object>(request);
         }
 
@@ -152,7 +161,9 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/version/{id}/status ",
                 Method = Method.GET
             };
+
             request.AddParameter("id", id, ParameterType.UrlSegment);
+
             return Client.Execute<object>(request);
         }
 
@@ -163,6 +174,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/issue-status/{key}/{deploymentProjectId} ",
                 Method = Method.GET
             };
+
             request.AddParameter("key", key, ParameterType.UrlSegment);
             request.AddParameter("deploymentProjectId", key, ParameterType.UrlSegment);
 
@@ -176,6 +188,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/issue-status/{key} ",
                 Method = Method.GET
             };
+
             request.AddParameter("key", key, ParameterType.UrlSegment);
 
             return Client.Execute<object>(request);
@@ -188,6 +201,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/dashboard/{projectId} ",
                 Method = Method.GET
             };
+
             request.AddParameter("projectId", projectId, ParameterType.UrlSegment);
 
             return Client.Execute<object>(request);
@@ -211,6 +225,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/environment/{environmentId}/results ",
                 Method = Method.GET
             };
+
             request.AddParameter("environmentId", environmentId, ParameterType.UrlSegment);
 
             return Client.Execute<object>(request);
@@ -223,6 +238,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/environment/{environmentId}/results",
                 Method = Method.GET
             };
+
             request.AddParameter("environmentId", environmentId, ParameterType.UrlSegment);
 
             return Client.Execute<DeployResults>(request);
@@ -279,6 +295,7 @@ namespace Bamboo.Sharp.Api.Services
                 Resource = "deploy/result/{deploymentResultId} ",
                 Method = Method.GET
             };
+
             request.AddParameter("deploymentResultId", deploymentResultId, ParameterType.UrlSegment);
 
             return Client.Execute<object>(request);
