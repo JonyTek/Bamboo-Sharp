@@ -12,7 +12,6 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,11 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\packages\RestSharp.104.5.0\lib\net4\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,10 +52,10 @@
     <Compile Include="BambooApi.cs" />
     <Compile Include="Clients\RequestClient.cs" />
     <Compile Include="Deserializers\ExceptionDeserializer.cs" />
-    <Compile Include="Deserializers\IDeserialize.cs" />
-    <Compile Include="Deserializers\ProjectsDeserializer.cs" />
     <Compile Include="Exceptions\InternalServerError.cs" />
     <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\DeployProject.cs" />
+    <Compile Include="Model\DeployResult.cs" />
     <Compile Include="Model\Result.cs" />
     <Compile Include="Model\Results.cs" />
     <Compile Include="Model\WebException.cs" />
@@ -69,9 +70,10 @@
     <Compile Include="Model\Stages.cs" />
     <Compile Include="Model\Type.cs" />
     <Compile Include="Services\BaseService.cs" />
-    <Compile Include="Services\BuildService.cs" />
     <Compile Include="Services\CurrentUserService.cs" />
+    <Compile Include="Services\DeployService.cs" />
     <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\BuildService.cs" />
     <Compile Include="Services\ProjectService.cs" />
     <Compile Include="Exceptions\RequestException.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
@@ -88,15 +90,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

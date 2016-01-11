@@ -34,7 +34,7 @@ namespace Bamboo.Sharp.Api.Clients
             where T : new()
         {
             _client = Authenticator.Authenticate();
-            _client.BaseUrl = BambooApi.BaseUrl;
+            _client.BaseUrl = new Uri(BambooApi.BaseUrl);
             
             var response = _client.Execute<T>(request);
 
@@ -56,7 +56,7 @@ namespace Bamboo.Sharp.Api.Clients
             var tcs = new TaskCompletionSource<T>();
             
             _client = Authenticator.Authenticate();
-            _client.BaseUrl = BambooApi.BaseUrl;
+            _client.BaseUrl = new Uri(BambooApi.BaseUrl);
             _client.ExecuteAsync<T>(request, response => tcs.SetResult(response.Data));
 
             var task = tcs.Task;
