@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Bamboo.Sharp</id>
+    <version>0.1.0</version>
+    <authors>jswieboda, sebastianroesch</authors>
+    <owners>Jonathan Swieboda</owners>
+    <projectUrl>https://github.com/JonyTek/Bamboo-Sharp</projectUrl>
+    <iconUrl>http://atlassian.wpengine.netdna-cdn.com/wp-content/uploads/GLiNTECH_WAS_Bamboo_plugin_icon_large.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A C# wrapper for the Atlassian Bamboo REST API. Please note that this current version has only very base functionality as I begun this project for work but will be continuing over the next few weeks. If you think this could be of use please keep an eye on the github repo....</description>
+    <releaseNotes>Added DeployService, updated dependencies.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Atlassian Bamboo CI</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="8.0.2" />
+	  <dependency id="RestSharp" version="105.2.3" />
+    </dependencies>
+  </metadata>
+</package>
