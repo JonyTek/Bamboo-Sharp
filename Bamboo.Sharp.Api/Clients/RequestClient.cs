@@ -15,6 +15,8 @@ namespace Bamboo.Sharp.Api.Clients
 
         private RequestClient()
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
         }
 
         internal static RequestClient Instance
