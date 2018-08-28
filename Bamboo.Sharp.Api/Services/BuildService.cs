@@ -18,7 +18,7 @@ namespace Bamboo.Sharp.Api.Services
             Method = Method.GET
         };
 
-        //Implemenations
+        //Implementations
         public Results GetBuilds()
         {
             return Client.Execute<Results>(_baseGetBuildRequest);

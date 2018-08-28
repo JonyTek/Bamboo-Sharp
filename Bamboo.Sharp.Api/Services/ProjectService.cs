@@ -25,7 +25,7 @@ namespace Bamboo.Sharp.Api.Services
             Method = Method.PUT
         };
 
-        //Implemenations
+        //Implementations
         public Projects GetProjects()
         {
             return Client.Execute<Projects>(_baseGetProjectsRequest);

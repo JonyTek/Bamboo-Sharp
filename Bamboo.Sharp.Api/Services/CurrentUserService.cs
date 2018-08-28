@@ -16,7 +16,7 @@ namespace Bamboo.Sharp.Api.Services
             Method = Method.GET
         };
 
-        //Implemenations
+        //Implementations
         public User GetUser()
         {
             return Client.Execute<User>(_baseCurrentuserRequest);
