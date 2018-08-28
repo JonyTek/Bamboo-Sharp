@@ -31,9 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
@@ -56,6 +55,7 @@
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\DeployProject.cs" />
     <Compile Include="Model\DeployResult.cs" />
+    <Compile Include="Model\QueueResult.cs" />
     <Compile Include="Model\Result.cs" />
     <Compile Include="Model\Results.cs" />
     <Compile Include="Model\WebException.cs" />
@@ -84,6 +84,7 @@
     <Compile Include="Model\RequestType.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\QueueService.cs" />
     <Compile Include="Services\SearchService.cs" />
     <Compile Include="Util\RequestTypeConverter.cs" />
   </ItemGroup>

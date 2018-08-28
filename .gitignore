@@ -2,3 +2,4 @@ packages/
 obj/
 bin/
 /Bamboo.Sharp.Api/bin
+*.vs
