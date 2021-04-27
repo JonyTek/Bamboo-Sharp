@@ -31,7 +31,7 @@ namespace Bamboo.Sharp.Api.Specs.Services
             var endpoint = api.GetService<CurrentUserService>();
             Action action = () => endpoint.GetUser();
 
-            action.ShouldThrow<UnauthorizedAccessException>();
+            action.Should().Throw<UnauthorizedAccessException>();
         }
 
         [TestMethod]
