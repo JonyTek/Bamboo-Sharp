@@ -1,102 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09B2E97B-6103-4693-9EBB-0450DF36465B}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bamboo.Sharp.Api</RootNamespace>
-    <AssemblyName>Bamboo.Sharp.Api</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <TargetFramework>net5.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Authentication\Authenticator.cs" />
-    <Compile Include="BambooApi.cs" />
-    <Compile Include="Clients\RequestClient.cs" />
-    <Compile Include="Deserializers\ExceptionDeserializer.cs" />
-    <Compile Include="Exceptions\InternalServerError.cs" />
-    <Compile Include="Model\Author.cs" />
-    <Compile Include="Model\DeployProject.cs" />
-    <Compile Include="Model\DeployResult.cs" />
-    <Compile Include="Model\QueueResult.cs" />
-    <Compile Include="Model\Result.cs" />
-    <Compile Include="Model\Results.cs" />
-    <Compile Include="Model\WebException.cs" />
-    <Compile Include="Model\Action.cs" />
-    <Compile Include="Model\Actions.cs" />
-    <Compile Include="Model\BaseNode.cs" />
-    <Compile Include="Model\Branches.cs" />
-    <Compile Include="Model\Plan.cs" />
-    <Compile Include="Model\PlanKey.cs" />
-    <Compile Include="Model\Projects.cs" />
-    <Compile Include="Model\SearchResultSet.cs" />
-    <Compile Include="Model\Stages.cs" />
-    <Compile Include="Model\Type.cs" />
-    <Compile Include="Services\BaseService.cs" />
-    <Compile Include="Services\CurrentUserService.cs" />
-    <Compile Include="Services\DeployService.cs" />
-    <Compile Include="Services\IService.cs" />
-    <Compile Include="Services\BuildService.cs" />
-    <Compile Include="Services\ProjectService.cs" />
-    <Compile Include="Exceptions\RequestException.cs" />
-    <Compile Include="Extensions\TypeExtensions.cs" />
-    <Compile Include="Factories\ServiceFactory.cs" />
-    <Compile Include="Model\Link.cs" />
-    <Compile Include="Model\Plans.cs" />
-    <Compile Include="Model\Project.cs" />
-    <Compile Include="Model\RequestType.cs" />
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\QueueService.cs" />
-    <Compile Include="Services\SearchService.cs" />
-    <Compile Include="Util\RequestTypeConverter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
